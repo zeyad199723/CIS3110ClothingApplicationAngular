@@ -1,0 +1,69 @@
+<h3>Cart Items:</h3>
+
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+
+  <div class="cart-item" *ngFor="let item of items">
+    <span>{{ item.name }}</span>
+    <span>{{ item.price | currency }}</span>
+  </div>
+
+  <p>
+    <a > Customer Shipping Info</a>
+  </p>
+
+    <p>
+      Please fill in the Information below for additional shipping costs
+    </p>
+  
+    <div>
+      <label for="name">
+        First Name
+      </label>
+      <input id="lname" type="text" formControlName="lname">
+    </div>
+
+    <div>
+      <label for="name">
+        Last Name
+      </label>
+      <input id="name" type="text" formControlName="name">
+    </div>
+
+    <div>
+      <label for="name">
+       Addres Line 1
+      </label>
+      <input id="name" type="text" formControlName="name">
+    </div>
+  
+    <div>
+      <label for="name">
+       Addres Line 2 (APT/SUITE)
+      </label>
+      <input id="name" type="text" formControlName="name">
+    </div>
+
+    <div>
+      <label for="name">
+       City
+      </label>
+      <input id="name" type="text" formControlName="name">
+    </div>
+
+    <div>
+      <label for="name">
+       State
+      </label>
+      <input id="name" type="text" formControlName="name">
+    </div>
+
+    <div>
+      <label for="name">
+       Zip Code
+      </label>
+      <input id="name" type="text" formControlName="name">
+    </div>
+
+    <button class="button" type="submit" routerLink="/shipping">Enter Here</button>
+
+</form>
